@@ -15,7 +15,7 @@ class DropColumns(BaseEstimator, TransformerMixin):
         # Retornamos um novo dataframe sem as colunas indesejadas
         return data.drop(labels=self.columns, axis='columns')
 
-# NÃO FUNCIONOU NA SEGUNDA PARTE 
+# NÃO FUNCIONOU NA SEGUNDA PARTE :/
 # Drop where NOTA=0 and the student cancel the class
 # class DropLinesClassCancelStudent(BaseEstimator, TransformerMixin):     
 #     def fit(self, X, y=None):
