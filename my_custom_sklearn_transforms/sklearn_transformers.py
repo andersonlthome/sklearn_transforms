@@ -22,5 +22,9 @@ class DropLinesClassCancelStudent(BaseEstimator, TransformerMixin):
     
     def transform(self, X):
         data = X.copy()
-        return data.drop(data[(data["REPROVACOES_DE"] == 0) & (data["NOTA_DE"] == 0) | (data["REPROVACOES_EM"] == 0) & (data["NOTA_EM"] == 0) | (data["REPROVACOES_MF"] == 0) & (data["NOTA_MF"] == 0) | (data["REPROVACOES_GO"] == 0) & (data["NOTA_GO"] == 0) ].index)   
+        return data.drop(data[
+            (data["REPROVACOES_DE"] == 0) & (data["NOTA_DE"] == 0) | 
+            (data["REPROVACOES_EM"] == 0) & (data["NOTA_EM"] == 0) | 
+            (data["REPROVACOES_MF"] == 0) & (data["NOTA_MF"] == 0) | 
+            (data["REPROVACOES_GO"] == 0) & (data["NOTA_GO"] == 0) ].index)   
     
